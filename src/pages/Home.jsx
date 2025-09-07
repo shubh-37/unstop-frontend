@@ -3,6 +3,7 @@ import userImage from '../assets/user.png';
 export default function Home({ onLogout }) {
   const user = JSON.parse(localStorage.getItem('user'));
   const handleLogout = () => {
+    localStorage.removeItem('user');
     onLogout();
   };
 
